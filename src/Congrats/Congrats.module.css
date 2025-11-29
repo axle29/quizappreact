@@ -1,0 +1,41 @@
+.quizwrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 410px;
+    width: 400px;
+    background-color: #343964;
+    border-radius: 10px;
+    text-align: center;
+    padding: 25px;
+}
+h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+h2{
+    font-size: 1rem;
+    font-weight: 400;
+}
+button{
+    height: 60px;
+    width: 240px;
+    border: none;
+    background: linear-gradient(to right,#E65895, #BC6BE8);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+button:active{
+    opacity: 0.9;
+    transform: scale(0.97);
+}

@@ -1,0 +1,33 @@
+.quizwrapper{
+    height: 600px;
+    width: 800px;
+}
+.headLine{
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    font-weight: 500;
+    font-size: 2rem;
+}
+.quizquestion{
+    
+    background-color: #343964;
+    height: 450px;
+    border-radius: 10px;
+}
+.question {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flag {
+  width: 50px;      /* max width of the flag */
+  height: auto;       /* maintain aspect ratio */
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}

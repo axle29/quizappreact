@@ -1,0 +1,69 @@
+.container{
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mother{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 550px;
+    gap: 26px;
+}
+.choice {
+    position: relative;               /* allows pseudo-element to be positioned inside */
+    height: 67px;
+    width: 262px;
+    border-radius: 10px;
+    background: #393F6E;              /* initial solid color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;                 /* keeps pseudo-element inside corners */
+    transition: box-shadow 0.5s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.choice::after {
+    content: "";
+    position: absolute;
+    inset: 0;                         /* fills entire button */
+    background: linear-gradient(to right, #E65895, #BC6BE8);
+    opacity: 0;                        /* hidden initially */
+    transition: opacity 0.5s ease;
+    border-radius: 10px;               /* match button corners */
+    z-index: 0;                         /* behind text */
+}
+
+.choice span {
+    position: relative;               /* keep text above pseudo-element */
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.choice:hover::after {
+    opacity: 1;                        /* fade in gradient on hover */
+}
+
+.choice:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* smooth shadow */
+    transform: scale(1.03);            /* optional slight grow effect */
+}
+.choice:active {
+    opacity: 0.9;
+    transform: scale(0.97); /* slightly shrink on click */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* smaller shadow */
+}
+.choice.correct span::after {
+    content: " ✅";
+    margin-left: 8px;
+}
+
+.choice.wrong span::after {
+    content: " ❌";
+    margin-left: 8px;
+}

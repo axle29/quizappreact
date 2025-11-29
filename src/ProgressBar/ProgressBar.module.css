@@ -1,0 +1,21 @@
+.progressbar{
+    height: 110px;
+    justify-content: center;
+    align-items: end;
+    gap: 15px;
+    display: flex;
+    padding-bottom: 10px;
+}
+.progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #393F6E;
+    border-radius: 50%;
+}
+.progress.active {
+  background: linear-gradient(to right, #e65895, #bc6be8); /* completed steps color */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
